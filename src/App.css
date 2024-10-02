@@ -1,0 +1,146 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.top{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap: 10px;
+  
+}
+
+.container{
+  position: fixed;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: stretch;
+  /* background-color: beige; */
+  gap: 15px;
+  width:275px;
+  top: 20%;
+  left: 40%;
+}
+
+.box{
+  background-color: black;
+  height: 2em;
+  width: 2em;
+  border-radius: 0.6em;
+}
+
+.head{
+  font-size:20px;
+  font-weight:600;
+}
+
+.dropdown{
+  padding: 1em;
+  border-radius: 1em;
+  border-style: solid;
+  border-color: black;
+}
+
+.content{
+  border-radius: 1em;
+  border-style:solid ;
+  border-color: black;
+  min-height:180px;
+  max-height: fit-content;
+  padding: 0 5%;
+  text-align: left;
+}
+
+
+.desc{
+  font-size: smaller;
+  padding-top: 0;
+  height: 100px;
+  margin: 0;
+}
+
+
+.features{
+  font-size: x-small;
+  text-align: center;
+}
+
+.initial{
+  background-color: gainsboro;
+  height: 100px;
+  border-radius: 1em;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.refresh{
+  background-color: black;
+  color: white;
+  border-radius: 0.6em;
+  padding: 1em;
+  width:275px;
+  margin: 10px 0;
+}
+
+.error{
+  background-color: rgb(250, 150, 150);
+  height: 100px;
+  border-radius: 1em;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.errbtn{
+  background-color: red;
+  color: white;
+  border-radius: 0.6em;
+  padding: 1em;
+  width:275px;
+  margin: 10px 0;
+  border-color:white;
+}
+
+
+
+
+
+
