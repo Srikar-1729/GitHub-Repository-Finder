@@ -11,7 +11,6 @@ function App() {
 const config = {
   headers: {
     'Accept': 'application/vnd.github+json',
-    'Authorization': 'Bearer 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', 
     'X-GitHub-Api-Version': '2022-11-28' 
   }
 };
