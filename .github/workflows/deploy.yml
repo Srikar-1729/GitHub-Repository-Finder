@@ -1,0 +1,7 @@
+jobs:
+  build-and-deploy:
+    steps:
+      - name: Build
+        env:
+          REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
+        run: npm run build
