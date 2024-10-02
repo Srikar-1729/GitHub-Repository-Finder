@@ -1,7 +1,33 @@
+name: Deploy React App to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]  # or 'master' if that's your default branch name
+  pull_request:
+    branches: [ main ]  # optional: if you want it to run on PRs too
+
 jobs:
   build-and-deploy:
+    runs-on: ubuntu-latest
+    
     steps:
-      - name: Build
-        env:
-          REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
-        run: npm run build
+    - uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # or whichever version you're using
+
+    - name: Install Dependencies
+      run: npm ci
+
+    - name: Build
+      env:
+        REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
+      run: npm run build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build  # or wherever your build output is
